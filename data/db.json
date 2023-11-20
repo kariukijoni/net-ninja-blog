@@ -14,9 +14,21 @@
     },
     {
       "id": 3,
-      "title": "This is my third blog",
+      "title": "This is my third blog!",
       "body": "Theming the navbar has never been easier thanks to the combination of theming classes and background-color utilities. Choose from variant=\"light\" for use with light background colors, or variant=\"dark\" for dark background colors. Then, customize with the bg prop or any custom css!",
       "author": "paps"
+    },
+    {
+      "title": "Forth Blog",
+      "body": "SweetAlert2 renders its content outside of the ReactTree. In order to render React Router components (such as Link) you have to wrap them in the routing context which should be the same with the app.",
+      "author": "jared",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "title": "test posi",
+      "body": "posito",
+      "author": "jakes"
     }
   ]
 }

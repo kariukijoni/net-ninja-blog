@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import {useNavigate} from "react-router-dom";
+import Swal from 'sweetalert2';
 
 
 export default function Create() {
@@ -25,9 +26,15 @@ export default function Create() {
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(blog)
         }).then(()=>{
-            console.log('New blog added!')
+            // console.log('New blog added!')
             setIsPending(false)
-            
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "New Blog Added Successfuly",
+                showConfirmButton: false,
+                timer: 3000
+              });
             navigate('/')
         })
     }
