@@ -1,4 +1,6 @@
+// import {  } from 'bootstrap';
 import { Link } from 'react-router-dom';
+import { Bar, BarChart, CartesianGrid,Tooltip, Legend, LineChart, PieChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 const BlogList = ({ blogs,title }) => {
   return (
@@ -12,6 +14,27 @@ const BlogList = ({ blogs,title }) => {
           </Link>
         </div>
       ))}
+  <div className=''>
+    <h4>ReCharts </h4>
+        <ResponsiveContainer width='100%' height={400}>
+          <BarChart data={blogs} margin={{
+            top:5,
+            left:30,
+            right:20,
+            bottom:5
+          }}>
+
+            <CartesianGrid strokeDasharray='3 3'/>
+            <XAxis dataKey='author'/>
+            <YAxis/>
+            <Legend/>
+            <Tooltip/>
+            <Bar dataKey='author' fill='#888fab'/>
+            <Bar dataKey='id' fill='#82ca9d'/>
+          </BarChart>
+        </ResponsiveContainer>
+  </div>
+
     </div>
   );
 }
