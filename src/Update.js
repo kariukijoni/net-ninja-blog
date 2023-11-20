@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 function Update() {
 
@@ -35,6 +36,16 @@ function Update() {
         e.preventDefault();
         axios.put('http://localhost:8000/blogs/'+id,values)
         .then(res=>{
+
+            Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "Updated successfully",
+                showConfirmButton: false,
+                timer: 3000,
+                width:'600px',
+              });
+
             navigate('/')
         })
     }
