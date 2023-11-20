@@ -13,10 +13,10 @@
       "id": 2
     },
     {
-      "title": "tte",
-      "body": "trt",
-      "author": "paps",
-      "id": 3
+      "id": 3,
+      "title": "This is my third blog",
+      "body": "Theming the navbar has never been easier thanks to the combination of theming classes and background-color utilities. Choose from variant=\"light\" for use with light background colors, or variant=\"dark\" for dark background colors. Then, customize with the bg prop or any custom css!",
+      "author": "paps"
     }
   ]
 }
