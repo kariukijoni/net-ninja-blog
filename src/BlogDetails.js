@@ -1,7 +1,6 @@
 import React from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams,useNavigate,Link} from 'react-router-dom'
 import useFetch from './useFetch';
-import {useNavigate} from "react-router-dom";
 
 export default function BlogDetails() {
     
@@ -30,7 +29,13 @@ export default function BlogDetails() {
                     <h2>{blog.title}</h2>
                     <small>Written by <b>{blog.author}</b></small>
                     <div>{blog.body}</div>
-                    <button className='btn btn-sm btn-outline-danger mb-1' onClick={handleClick}>Delete</button>
+                    <div>
+                        <Link className='text-decoration-none' to={`/update/${blog.id}`}>
+                            <button className='btn btn-sm btn-success'>Update</button>
+                        </Link>
+                        {/* <button className='btn btn-sm btn-outline-primary me-1'>Edit</button> */}
+                        <button className='btn btn-sm btn-outline-danger mr-2' onClick={handleClick}>Delete</button>
+                    </div>
                 </article>
             </div>
             
