@@ -4,7 +4,7 @@ import Home from './Home';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import Create from './Create';
 import BlogDetails from './BlogDetails';
-// import NotFound from './NotFound';
+import NotFound from './NotFound';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
               
               <Route exact path='/blogs/:id' element={<BlogDetails/>}/>
               
-              {/* <Route exact path='*' element={<NotFound/>}></Route> */}
+              <Route exact path='*' element={<NotFound/>}></Route>
           </Routes>
           
             
